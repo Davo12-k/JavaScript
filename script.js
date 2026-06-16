@@ -345,9 +345,125 @@ console.log (idk.repeat(5))
 
 const slipText = `Learning JavaScript is actually interesting`
 console.log(slipText.split(` `))
+ 
+const phoneBrand = [`iPhone`, `Samsung`,`Tecno`]
+console.log(phoneBrand)
+console.log(phoneBrand.toString())
+console.log (phoneBrand.at([0]))
+phoneBrand.pop()
+console.log(phoneBrand);
+phoneBrand.push(`Infinix`)
+console.log(phoneBrand);
+phoneBrand.shift()
+console.log(phoneBrand);
+phoneBrand.unshift(`Nokia`)
+console.log(phoneBrand);
 
+let thiss  =  slipText.concat(phoneBrand)
+console.log(thiss)
+
+
+ let cars = [`Benz`, `BMW`, `Toyota`, `suzuki`, `Lexus`, `Kia`]
+ console.log(cars)
+
+
+// To remove
+// start at index 1 and remove one
+cars.splice(2,1)
+console.log(cars)
+
+// To add
+//Start at index 1
+//Remove 0 items
+//Add Mazda
+cars.splice(1,0,`Mazda`)
+console.log(cars)
+
+//TO replace
+//Start at index 1
+//Remove suzuki
+//Insert  pigeout
+
+cars.splice(3,1, `Pigeout`)
+console.log(cars)
+//ASSIGNMENT ON ARRAY
+
+const fruitsA = [`Apple`, `Banana`]
+fruitsA.push(`Orange`, `Mango`)
+console.log(fruitsA)
+
+const colors =  [`Red`, `Blue`, `Green`]
+colors.pop()
+console.log(colors)
+
+const countriesA = [`Kenya`,`Ghana`,`Nigeria`]
+countriesA.shift()
+console.log(countriesA)
+
+const numbersA = [20,30,40]
+numbersA.unshift(10)
+console.log(numbersA)
+
+const studentA = [`John`,`Sarah`,`Mike`]
+console.log(studentA)
+console.log(studentA.includes(`Sarah`))
+console.log(studentA.includes(`David`))
+
+const foodsA = [`Rice`,`Beans`,`Yam`, `Bread`]
+console.log(foodsA)
+console.log(foodsA.indexOf(`Yam`))
+console.log(foodsA.indexOf(`Bread`))
+//slice
+const fruitsAA = [`Apple`, `Banana`,`Orange`, `Mango`]
+console.log(fruitsAA.slice(1,3))
+//splice 
+const fruitsAAA = [`Apple`,`Banana`,`Orange`]
+console.log(fruitsAAA)
+fruitsAAA.splice(1,1, `Mango`)
+console.log(fruitsAAA)
+
+const namesA = [`Amina`, `Tunde`, `Chidi`]
+namesA.forEach((name)=> console.log( `Welcome `+ name))
+
+const numberss = [1,2,3,4,5]
+
+numberss.map((num)=> console.log(num *2))
+
+const studentss = [
+  {name: `Amina`},
+  {name: `Tunde`},
+  {name: `Chidi`}
+]
+
+const getName = studentss.map((name)=> name.name)
+console.log(getName)
+//
+
+const scoresS = [30,80,45,90,60]
  
- 
- 
- 
- 
+const NumAbove = scoresS.filter((score)=> score >= 50)
+console.log(NumAbove);
+
+const studentsData = [
+  {name: `Amina`, score: 45},
+  {name:`Tunde`, score:82},
+  {name:`Chidi`, score:60}
+]
+
+const passedS = studentsData.filter((score)=> score.score >= 50)
+console.log(passedS)
+
+const users = [
+  {id:1, name:`John`},
+  {id:2, name:`Sarah`},
+  {id:3, name: `Mike`}
+]
+
+const findId = users.find((look)=> look.id===2)
+console.log(findId)
+
+users.find((named)=> console.log(named.name==`chidi`))
+
+const randomNum = [20,50,70,34,63,47,74]
+const total = randomNum.reduce((d,a)=> d+a)
+console.log(total)
