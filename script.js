@@ -467,3 +467,330 @@ users.find((named)=> console.log(named.name==`chidi`))
 const randomNum = [20,50,70,34,63,47,74]
 const total = randomNum.reduce((d,a)=> d+a)
 console.log(total)
+
+let phoneA = [20, 50,70,66,45,34,25]
+phoneA.sort((a,b)=> a-b)
+console.log(phoneA);
+
+console.log(phoneA.reverse())
+
+//ASSIGNMENT ON ALL
+
+const checkNum = 7
+if (checkNum %2===0) {
+console.log(`Even`)
+} else {
+  console.log(`Odd`)
+}
+
+const numbs = -1
+
+if (numbs > 0) {
+  console.log(`Positive`)
+} else if (numbs < 0) {
+  console.log(`Negative`)
+} else {
+  console.log(`Zero`)
+}
+
+const votingAge = 18
+
+if (votingAge >=18) {
+  console.log(`You are eligible to vote`)
+} else {
+  console.log(`You are a minor`)
+}
+
+const checkPass  = 1234
+
+if (checkPass === 1234 ) {
+  console.log(`Access granted`)
+} else{
+  console.log(`Access denied`)
+}
+
+const temperature = 0
+
+if(temperature >= 30) {
+  console.log(`Hot`)
+} else if (temperature <=15) {
+  console.log(`Cold`)
+} else{
+  console.log(`Normal`)
+}
+
+const num1 = 600
+const num2 = 400
+
+if (num1 > num2) {
+  console.log(`Largest`)
+} else{
+  console.log(`Lesser`)
+}
+
+ // 70+ A
+//60-69 B
+//50- C
+//BELOW 50 F
+
+// const scorez = prompt(`check your result`)
+
+// if(scorez >= 70 && scorez <101) {
+//   console.log(`A1`)
+// } 
+// else if (scorez > 59 && scorez < 70) { 
+//   console.log(`B2`) 
+// }else if( scorez > 49 && scorez <51) {
+// console.log(`C4`)
+// }else{
+//   console.log(`Come to the deparment for questioning`)
+// }
+
+const leap = 366
+
+if (leap %2===0) {
+  console.log(`Leap Year`)
+} else {
+  console.log(`Normal Year`)
+}
+
+const username1 = `Davo1`
+
+if(username1.length < 5) {
+  console.log(`Too Short`)
+}else {
+  console.log(`valid`)
+}
+const usernameA = `admin`
+const passworrd = `1234`
+
+if(usernameA===`admin` && passworrd=== `1234`) {
+console.log(`Login Successful`)
+}else {
+  console.log(`invalid credentials`)
+}
+
+const balance = `$20000`
+
+if(balance<= `$20000`) {
+  console.log(`Allow Withdraw`)
+}else{
+  console.log(`Insufficient Funds`)
+}
+
+// const discount = prompt(`Discount Sale`)
+// if(discount > 10000 ){
+//   console.log(`10% discount`)
+// } else if (discount >= 5000 && discount < 9999){
+//   console.log(`5% discount`)
+// } else {
+//   console.log(`No discount`)
+// }
+
+const checkNumRange = 40
+if(checkNumRange >=10 && checkNumRange <=50){
+  console.log(`The number is between 10 and 50`)
+}else{
+  console.log(`The number is not between 10 and 50`);
+  
+}
+
+// const traficLight = prompt(`Light system`)
+
+// if(traficLight===`Red`){
+//   console.log(`Stop`)
+// } else if (traficLight===`Yellow`){
+//   console.log(`Ready`)
+// } if (traficLight===`Green`){
+//   console.log(`Go`)
+// }
+
+// const remaining
+
+//ASSIGNMENT ON LOOPS
+
+const printNum = 10
+for(i=1;i<=10;i++){
+console.log(i)
+}
+const printNum2 = 10
+for(i=10;i>=1;i--){
+console.log(i);
+
+}
+const printEven = 20
+for(i=0;i<=20;i++){
+ if (i %2===0)
+  console.log(i)
+}
+
+const printOdd = 20
+for(i=1;i<=20;i++){
+  if(i %2!==0)
+    console.log(i)
+}
+
+let calculateSum = 0
+for(i=1;i<=10;i++){
+  calculateSum += i
+  console.log(calculateSum)
+} 
+
+let multiplyTable = 5
+for(i=1;i<=12;i++){
+console.log(`${5} * ${i} = ${5* i}`
+)
+}
+
+let findNum = 3
+for(i=1;i<=30;i++) {
+if (i %3===0)
+  console.log(i)
+}
+
+let loopText =`Javascript is fun`
+let vowels = 0
+for(i=0;i < loopText.length;i++){
+  if("aeiou".includes(loopText[i].toLowerCase()) ){
+   vowels++;
+  }
+ 
+}
+ console.log(vowels)
+
+ 
+const reverseName =`ayo`
+let reversed = ''
+for(i=reverseName.length -1;i>=0;i--){
+ reversed += reverseName[i]
+  console.log(reversed)
+
+}
+
+const build =   `*`
+for(i=1;i<=6;i++){
+console.log(i)
+}
+
+// FUNCTIONS ASSIGNMENT
+
+function PrintLog(p){
+console.log(p)
+}
+
+function Greet(){
+  console.log(`Hello World`)
+}
+Greet()
+
+function myNamee(){
+  console.log(`David`)
+}
+myNamee()
+
+function Goal(){
+  PrintLog(`I will master Javascript.`)
+}
+
+Goal()
+
+function printNumber(){
+  for(i=1;i<=5;i++){
+console.log(i);
+
+  }
+}
+printNumber()
+//6
+function star(){
+  PrintLog(`***`)
+}
+star()
+// LEVEL 2, FUNCTION WITH PARAMETER
+function greetPerson(name){
+PrintLog(`Hello ${name}`)
+}
+greetPerson(`Ayo`)
+
+function addThis(a,b){
+return a+b
+}
+PrintLog(addThis(20,10))
+
+function multiply(a,b){
+  return a*b
+}
+PrintLog(multiply(5,4))
+
+function studentName(name){
+  PrintLog(`Amina`)
+}
+studentName()
+
+function NextYearAge(x){
+return x +1
+}
+PrintLog(NextYearAge(25))
+
+function returnSum (a,b){
+return a+b
+}
+PrintLog(returnSum(4,6))
+
+function getFullName(firstname, secondname){
+return `${firstname} ${secondname}`
+
+}
+PrintLog(getFullName(`David`,`Ade`))
+
+function double(a){
+return a*2
+}
+PrintLog(double(8))
+
+function passed(score){
+if (score>=50) {
+  return `Passed`
+} else {
+  return `Failed`
+}
+}
+PrintLog(passed(50))
+PrintLog(passed(70))
+PrintLog(passed(30))
+
+function iseven(nume){
+ return nume %2===0
+}
+PrintLog(iseven(4))
+PrintLog(iseven(5))
+
+function studentReport(name,score){
+return `${name} ${score}`
+}
+PrintLog(studentReport(`Tunde Scored`,`85 Point`))
+
+function calculateTotal(price,quantity){
+return price*quantity
+}
+PrintLog(calculateTotal(500,3))
+
+//18 
+
+//19
+function findLarger(a,b){
+if (a>b) {
+  return a
+} else {
+  return b
+}
+}
+
+PrintLog(findLarger(10,25))
+
+//20
+function createUser(firstnam) {
+  PrintLog(`${firstnam}123`)
+}
+
+createUser(`ayo`)
