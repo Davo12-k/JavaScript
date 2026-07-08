@@ -776,6 +776,10 @@ return price*quantity
 PrintLog(calculateTotal(500,3))
 
 //18 
+function turnMinuteToSec(min){
+ return min*1
+}
+PrintLog(turnMinuteToSec(60))
 
 //19
 function findLarger(a,b){
@@ -794,3 +798,5 @@ function createUser(firstnam) {
 }
 
 createUser(`ayo`)
+
+
