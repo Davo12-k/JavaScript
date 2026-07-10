@@ -8,11 +8,46 @@
 <body>
     <h1>Counter App</h1>
        <p id="counter"></p>
+       <button id="addBtn" class="h-[20vh] w-[10%]">+</button>
+       <button id="decreaseBtn">-</button>
+       <button id="resetBtn">Reset</button>
 
 
     <script>
-    
+    const counter = document.getElementById(`counter`)
+    const addBtn = document.getElementById(`addBtn`)
+    const decreaseBtn = document.getElementById(`decreaseBtn`)
+    const resetBtn = document.getElementById(`resetBtn`)
 
+    function displayCount(){
+        counter.innerText = count;
+
+        if (count >0){
+            counter.style.color = `green`
+        } else if (count < 0){
+            counter.style.color = `red`
+        } else {
+          counter.style.color = `black`
+        }
+
+    }
+
+    let count = 0
+    counter.innerText = count;
+
+    addBtn.addEventListener(`click`, ()=>{
+     count += 1
+        displayCount()
+    })
+
+    decreaseBtn.addEventListener(`click`, ()=>{
+        count -=1
+        displayCount()
+    }) 
+    resetBtn.addEventListener(`click`, ()=>{
+        count = 0
+        displayCount()
+    })
     </script>
 </body>
-</html>
+</html>    
