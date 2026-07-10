@@ -8,13 +8,55 @@
 <body>
     <h1>Counter App2</h1>
      <p id="counter"></p>
+     <button id="addBtn">+</button>
+     <button id="decreaseBtn">-</button>
+    <button id="resetBtn">reset</button>
 
 
 
 
 
     <script>
+      
+      const addBtn = document.getElementById(`addBtn`)
+      const decreaseBtn = document.getElementById(`decreaseBtn`)
+      const resetBtn = document.getElementById(`resetBtn`)
+      
+      function showDisplay(){
+        counter.innerText = count;
+
+        if (count > 0) {
+            counter.style.color = `green`
+        } else if (count < 0) {
+            counter.style.color = `red`
+        } else {
+            counter.style.color = `black`
+        }
+
+
+      }
+
       let count = 0
+      showDisplay()
+
+      addBtn.addEventListener(`click`, ()=>{
+        count += 1
+        showDisplay()
+    
+        
+      })
+
+      decreaseBtn.addEventListener(`click`, ()=>{
+        count -=1
+        showDisplay()
+      })
+
+      resetBtn.addEventListener(`click`, ()=>{
+        count = 0
+        showDisplay()
+      })
+
+      
 
     </script>
 </body>

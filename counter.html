@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counter App</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
-<body>
-    <h1>Counter App</h1>
+<body class=" h-[100vh] w-[100%] flex flex-col justify-center items-center gap-4" >
+    <h1 class="text-4xl text-green-500">COUNTER APP</h1>
        <p id="counter"></p>
-       <button id="addBtn" class="h-[20vh] w-[10%]">+</button>
-       <button id="decreaseBtn">-</button>
-       <button id="resetBtn">Reset</button>
+       <button id="addBtn" class="h-[5vh] w-[3%] bg-green-500">+</button>
+       <button id="decreaseBtn" class="h-[5vh] w-[3%] bg-red-500">-</button>
+       <button id="resetBtn" class="h-[5vh] w-[3%] bg-black text-white">Reset</button>
 
 
     <script>
@@ -18,6 +20,7 @@
     const addBtn = document.getElementById(`addBtn`)
     const decreaseBtn = document.getElementById(`decreaseBtn`)
     const resetBtn = document.getElementById(`resetBtn`)
+    document.body.style.backgroundColor = `skyblue`
 
     function displayCount(){
         counter.innerText = count;
@@ -34,6 +37,7 @@
 
     let count = 0
     counter.innerText = count;
+    // QQ  count.innerText.style.font = `larger`
 
     addBtn.addEventListener(`click`, ()=>{
      count += 1
