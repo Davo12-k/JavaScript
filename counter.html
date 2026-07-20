@@ -11,7 +11,7 @@
     <h1 class="text-4xl text-green-500">COUNTER APP</h1>
        <p id="counter"></p>
        <button id="addBtn" class="h-[5vh] w-[3%] bg-green-500">+</button>
-       <button id="decreaseBtn" class="h-[5vh] w-[3%] bg-red-500">-</button>
+       <button id="decreaseBtn" class="h-[5vh] w-[3%] bg-red-700">-</button>
        <button id="resetBtn" class="h-[5vh] w-[3%] bg-black text-white">Reset</button>
 
 
@@ -37,7 +37,7 @@
 
     let count = 0
     counter.innerText = count;
-    // QQ  count.innerText.style.font = `larger`
+    counter.style.fontSize = `4rem`
 
     addBtn.addEventListener(`click`, ()=>{
      count += 1

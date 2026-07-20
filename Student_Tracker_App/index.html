@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Tracker</title>
+    <link rel="stylesheet" href="./tracker.css" />
+  </head>
+  <body>
+    <h1>Student Tracker</h1>
+
+    <div style class="container">
+      <ul id="helpDisplay"></ul>
+
+      <button id="passBtn">Show Passed </button>
+      <p id="summary"></p>
+    </div>
+    <input type="text" placeholder="Enter student's name">
+    <input type="number" placeholder="Enter student's score">
+    <button id="addSBtn">Add Student</button>
+
+    <script>
+      const helpDisplay = document.getElementById(`helpDisplay`);
+      const passBtn = document.getElementById("passBtn");
+      const summary = document.getElementById("summary");
+      const addSBtn = document.getElementById('addSBtn')
+
+      const students = [
+        { name: "Amina", score: 45 },
+        { name: "Tunde", score: 82 },
+        { name: "Chidi", score: 60 },
+        { name: "Ngozi", score: 38 },
+        { name: "Ayoola", score: 50 },
+        { name: "David", score: 86 },
+        { name: "Fawaz", score: 74 },
+        { name: "Marvellous", score: 80 },
+        { name: "Uchina", score: 40 },
+        { name: "Bolarinwa", score: 44 },
+        { name: "Lola", score: 67 },
+        { name: "Taiwo", score: 47 },
+        { name: "Idogbe", score: 95 },
+      ];
+
+      const displayStudents = (array) => {
+        helpDisplay.innerHTML = ''
+          array.forEach((student) => {
+        const li = document.createElement("li");
+        li.innerText = ` ${student.name} -- ${student.score} points`;
+        helpDisplay.append(li);
+
+        if (student.score >= 50) {
+          li.style.color = "green";
+        } else {
+          li.style.color = "red";
+        }
+      });
+         
+      }
+
+      displayStudents(students)
+
+     
+
+      const passedStudents =  students.filter((student)=>student.score >= 50)
+
+      passBtn.addEventListener('click',()=>{
+          displayStudents(passedStudents)
+          summary.innerText = `${passedStudents.length} of ${students.length} students passed`
+      })
+
+      
+
+      
+    </script>
+  </body>
+</html>

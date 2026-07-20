@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: bisque;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.container {
+   min-height: auto;
+   width: 50%;
+   background-color: azure;
+   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+   padding: 5px 20px;
+   border-radius: 15px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem;
+   
+   
+}
+
+.container ul {
+    list-style: none;
+    font-size: 1.5rem;
+    padding: 0 20px;
+}
+
+.container button{
+  height: 40px;
+  width: 160px;
+  background-color:green ;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+#summary{
+    color:olivedrab;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
