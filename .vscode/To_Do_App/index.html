@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="./todo.css">
+</head>
+<body>
+     <h1>To-Do App</h1>
+        
+      <div class="container">
+        <input id="userInput" type="text" placeholder="Enter your task">
+        <button id="addtodoBtn">addTodo</button>
+        <button id="deletetodoBtn">deleteTodo</button>
+        <ol id="displayTodo"></ol>
+      </div>
+
+
+
+
+
+
+     <script>
+       let todos = [];
+
+       const addtodoBtn = document.getElementById('addtodoBtn')
+       const deletetodoBtn = document.getElementById('deletetodoBtn')
+       const userInput = document.getElementById('userInput')
+       const displayTodo = document.getElementById('displayTodo')
+      
+
+       addtodoBtn.addEventListener('click', ()=>{
+        if(userInput.value.trim()=== '' || !isNaN(userInput.value)) return
+        let newTodo = userInput.value 
+        todos.push(newTodo) 
+        userInput.value = ''
+         
+
+        renderTodo()
+       })
+
+
+       
+
+
+
+       function renderTodo(){
+         displayTodo.innerHTML=''
+        todos.forEach((todo)=> {
+        const li = document.createElement('li')
+        li.innerText = todo
+        displayTodo.append(li)
+        });
+
+        
+
+       }
+
+
+       deletetodoBtn.addEventListener('click',()=>{
+        displayTodo.innerText = todos.shift()
+        renderTodo()
+       })
+       
+     </script>
+</body>
+</html>

@@ -14,15 +14,20 @@
 
       <button id="passBtn">Show Passed </button>
       <p id="summary"></p>
-    </div>
-    <input type="text" placeholder="Enter student's name">
-    <input type="number" placeholder="Enter student's score">
+
+      <input id="addName" type="text" placeholder="Enter student's name">
+    <input id="addScore" type="number" placeholder="Enter student's score">
     <button id="addSBtn">Add Student</button>
+
+    </div>
+    
 
     <script>
       const helpDisplay = document.getElementById(`helpDisplay`);
       const passBtn = document.getElementById("passBtn");
       const summary = document.getElementById("summary");
+      const addName = document.getElementById('addName');
+      const addScore = document.getElementById('addScore')
       const addSBtn = document.getElementById('addSBtn')
 
       const students = [
@@ -65,9 +70,42 @@
 
       passBtn.addEventListener('click',()=>{
           displayStudents(passedStudents)
+
+          function updateSummary (){
           summary.innerText = `${passedStudents.length} of ${students.length} students passed`
+          }
+
+          updateSummary()
+          
       })
 
+          const addNewStudent = (studentName,studentScore) => {
+            studentName = addName.value;
+            studentScore = Number(addScore.value) 
+          }
+
+           if(studentName === ''  || isNaN(studentScore)){
+             return
+           }
+
+           const newStudent = {
+             name : studentName,
+             score : studentScore
+           }
+
+
+           students.push(newStudent)
+           displayStudents(students)
+           
+
+           addSBtn.addEventListener('click', ()=>{
+        addNewStudent()
+
+        displayStudents(students)
+        addName.value = ''
+        addScore.value = ''
+      })
+       
       
 
       
