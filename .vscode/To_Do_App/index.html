@@ -12,8 +12,9 @@
       <div class="container">
         <input id="userInput" type="text" placeholder="Enter your task">
         <button id="addtodoBtn">addTodo</button>
-        <button id="deletetodoBtn">deleteTodo</button>
+        <!-- <button id="deletetodoBtn">deleteTodo</button> -->
         <ol id="displayTodo"></ol>
+        
       </div>
 
 
@@ -25,9 +26,10 @@
        let todos = [];
 
        const addtodoBtn = document.getElementById('addtodoBtn')
-       const deletetodoBtn = document.getElementById('deletetodoBtn')
+      //  const deletetodoBtn = document.getElementById('deletetodoBtn')
        const userInput = document.getElementById('userInput')
        const displayTodo = document.getElementById('displayTodo')
+    
       
 
        addtodoBtn.addEventListener('click', ()=>{
@@ -47,10 +49,21 @@
 
        function renderTodo(){
          displayTodo.innerHTML=''
-        todos.forEach((todo)=> {
+        todos.forEach((todo,index)=> {
         const li = document.createElement('li')
         li.innerText = todo
         displayTodo.append(li)
+
+        const deleteTBtn = document.createElement('button')
+       deleteTBtn.innerText = 'delete'
+       deleteTBtn.addEventListener('click',()=>{
+        todos.splice(index,1)
+         renderTodo()
+          
+       })
+
+       li.append(deleteTBtn)
+       displayTodo.append(li)
         });
 
         
@@ -58,10 +71,31 @@
        }
 
 
-       deletetodoBtn.addEventListener('click',()=>{
-        displayTodo.innerText = todos.shift()
+        function addTodoo(){
+           if(userInput.value.trim()=== '' || !isNaN(userInput.value)) return;
+
+           todos.push(userInput.value)
+      
+        }
+
+        userInput.addEventListener('keydown', (event)=>{
+         if(event.key === 'Enter'){
+          addTodoo()
+          userInput.value = ''
+         }
+
         renderTodo()
-       })
+        })
+
+  
+
+      //  deletetodoBtn.addEventListener('click',()=>{
+      //   todos.pop()
+      //   renderTodo()
+      //  })
+    
+       
+       
        
      </script>
 </body>

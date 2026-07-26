@@ -32,6 +32,7 @@ body{
     margin-top: 20px;
     padding: 1rem 2.3rem;
     font-size: 1.5rem;
+    color: blue;
 }
 
 .container input{
@@ -44,6 +45,7 @@ body{
     color: grey;
     font-weight: bold;
     font-size: 1rem;
+    
 }
 
 .container button{
@@ -54,4 +56,12 @@ body{
     color: navy;
     border-radius: 10px;
     font-size: 1rem;
+}
+
+.container li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
 }
