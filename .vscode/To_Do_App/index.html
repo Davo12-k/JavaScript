@@ -34,7 +34,7 @@
 
        addtodoBtn.addEventListener('click', ()=>{
         if(userInput.value.trim()=== '' || !isNaN(userInput.value)) return
-        let newTodo = userInput.value 
+        const newTodo = userInput.value 
         todos.push(newTodo) 
         userInput.value = ''
          
@@ -56,6 +56,8 @@
 
         const deleteTBtn = document.createElement('button')
        deleteTBtn.innerText = 'delete'
+       deleteTBtn.style.backgroundColor = 'red'
+       deleteTBtn.style.color = 'white'
        deleteTBtn.addEventListener('click',()=>{
         todos.splice(index,1)
          renderTodo()

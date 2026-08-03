@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+<body>
+    <h1>Fetching Users</h1>
+
+    <ul id="showUsers"></ul>
+    
+
+ 
+
+
+    <script>
+        // async means this function is going to do something that takes time
+        const showUsers = document.getElementById('showUsers')
+
+        const api = 'https://jsonplaceholder.typicode.com/users';
+
+        async function getUsers() {
+            const response = await fetch(api)
+            if(!response.ok){
+                throw new Error("Failed to load users, try again later.");
+                
+            }
+
+            const users = await response.json()
+            console.log(users)
+            renderUsers(users)
+            
+        }
+        getUsers()
+
+
+        const renderUsers = function(users) {
+            users.forEach(user => {
+                const list = document.createElement('li')
+                const para = document.createElement('p')
+                para.innerText = `${user.id}`
+
+                const name = document.createElement('h3')
+                name.innerText = `${user.name}`
+
+                const username = document.createElement('h2')
+                username.innerText = `${user.username}`
+
+                list.append(para,name,username)
+                showUsers.append(list)
+
+
+
+
+             });
+            
+        }
+
+
+
+
+    </script>
+</body>
+</html>
