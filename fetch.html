@@ -21,13 +21,17 @@
         const api = 'https://jsonplaceholder.typicode.com/users';
 
         async function getUsers() {
-            const response = await fetch(api)
-            if(!response.ok){
+            const resp = await fetch(api)
+
+            console.log(resp)
+
+
+            if(!resp.ok){
                 throw new Error("Failed to load users, try again later.");
                 
             }
 
-            const users = await response.json()
+            const users = await resp.json()
             console.log(users)
             renderUsers(users)
             
