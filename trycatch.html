@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+</head>
+<body>
+    
+    <h1>Products Page</h1>
+    <p id="errorMessage"></p>
+    <p id="loadingState"></p>
+    <ul id="displayProducts"></ul>
+
+
+
+
+
+
+    <script>
+     const url = 'https://fakestoreapi.com/products'
+     const errorMessage = document.getElementById('errorMessage')
+     const loadingState = document.getElementById('loadingState')
+     const displayProducts = document.getElementById('displayProducts')
+
+
+
+        let allProduct = []
+
+        const getProducts = async ()=>{
+            loadingState.innerText = 'Loading, please wait!';
+            errorMessage.innerText =  ''
+
+            try {
+                const response =  await fetch(url)
+                if (!response.ok){
+                 throw new Error (`{respond.status}`)
+                }
+                
+            } catch (error) 
+            { errorMessage.innerText = error.message
+
+            } finally {
+                loadingState.innerHTML = ''
+                
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>
