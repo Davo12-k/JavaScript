@@ -799,4 +799,8 @@ function createUser(firstnam) {
 
 createUser(`ayo`)
 
+getInitial()=>{
+
+}
+
 
