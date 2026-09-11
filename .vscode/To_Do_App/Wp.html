@@ -1,31 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Change Background</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1>Color Changer</h1>
 
-    <input id="colorInput" type="text" placeholder="Enter a color">
+    <input id="colorInput" type="text" placeholder="Enter a color" />
 
     <button id="changeBtn">Change Color</button>
 
+    <button id="resetBtn">Reset Bg</button>
+
     <script>
-        const colorInput = document.getElementById("colorInput");
+      const colorInput = document.getElementById("colorInput");
       const changeBtn = document.getElementById("changeBtn");
+      const resetBtn = document.getElementById('resetBg')
 
-changeBtn.addEventListener("click", () => {
+      changeBtn.addEventListener("click", () => {
+        const Bg = colorInput.value;
+        document.body.style.backgroundColor = Bg;
+        colorInput.value = ''
+      });
 
-    const color = colorInput.value;
 
-    document.body.style.backgroundColor = color;
-
-});
+      resetBtn.addEventListener('click', () =>{
+        document.body.style.backgroundColor = 'white'
+      })
     </script>
-</body>
+  </body>
 </html>
-    
