@@ -797,10 +797,67 @@ function createUser(firstnam) {
   PrintLog(`${firstnam}123`)
 }
 
-createUser(`ayo`)
+// createUser(`ayo`)
 
-getInitial()=>{
+// getInitial( )=> {
 
+// }
+
+
+let price = 2000000;
+let discount ;
+let amountpayable;
+
+if ( price >= 5000000) {
+  discount = price * 0.1
+  amountpayable = price - discount
+  console.log(amountpayable)
+} else if( price >= 3000000 && price < 5000000
+){
+  discount = price * 0.05
+  amountpayable = price - discount
+  console.log(amountpayable)
+}else{
+  amountpayable = price
+  console.log (amountpayable)
+  
 }
 
 
+let vAge = 17
+const hasPvc = true
+age >=18 && hasPvc ? console.log('You are eligible  to vote'): console.log('they go')
+
+let nummm = -5
+
+if(nummm < 0){
+    console.log('Negative')
+}else{
+    console.log('n')
+}
+
+let checkE = 8
+
+if(checkE %2===0){
+ console.log('Even')
+}
+
+let fruitts = ['Banana', 'Orange','Dates','Mango']
+console.log(fruitts);
+
+fruitts.map((fru)=>(
+console.log(fru)
+
+))
+
+let carss = ['benz', 'bmw', 'volvo', 'toyota','ferari']
+
+const carWithO = carss.filter((car)=>(
+  car.includes('o')
+))
+ console.log(carWithO);
+ 
+
+
+
+ 
